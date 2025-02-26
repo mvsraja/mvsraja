@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mvs Raja | Certificates</title>
+    <link rel="icon" type="image/x-icon" href="src/png/main-favicon.png" />
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="view-image">
+        <img src="https://images.unsplash.com/photo-1668954206766-404e981f57f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60." alt="">
+        <span>X</span>
+    </div>
+
+    <div class="image-container">
+        <img src="img/1.png" alt="">
+        <img src="img/2.png" alt="">
+        <img src="img/3.png" alt="">
+        <img src="img/4.png" alt="">
+        <img src="img/5.png" alt="">
+        <img src="img/6.png" alt="">
+        <img src="img/7.png" alt="">
+        <img src="img/8.png" alt="">
+        <img src="img/9.png" alt="">
+        <img src="img/10.jpg" alt="">
+        <img src="img/11.jpg" alt="">
+        <img src="img/12.jpg" alt="">
+        <img src="img/13.jpg" alt="">
+        <img src="img/14.jpg" alt="">
+        <img src="img/15.jpg" alt="">
+        <img src="img/16.jpg" alt="">
+        <img src="img/17.jpg" alt="">
+
+    
+
+    
+
+    </div>
+</body>
+<script>
+    let images = document.querySelectorAll(".image-container img");
+    let viewImage = document.querySelector(".view-image");
+    let fullImage = document.querySelector(".view-image img");
+    let closeBtn = document.querySelector(".view-image span");
+    for(let image of images){
+        image.addEventListener("click",function(e){
+            console.log(e);
+            viewImage.style.display = "flex";
+            fullImage.src = e.target.src;
+        })
+    }
+    closeBtn.addEventListener('click',function(){
+        viewImage.style.display = "none";
+    })
+</script>
+</html>
